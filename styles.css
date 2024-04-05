@@ -1,0 +1,87 @@
+:root{
+    --bg-table: black;
+    --bg-selection: rgb(221, 220, 220);
+    --color-selecttion: rgb(17, 19, 130);
+    --span-hover: rgb(55, 53, 53);
+    --bg-tbody-1: rgb(34, 34, 34);
+    --bg-tbody-2: rgb(41, 91, 74);
+    --bg-tbody-3: rgb(47, 135, 106);
+    --bg-tbody-4: green;
+    --bg-tbody-5-blue: rgb(5, 99, 153);
+    --bg-tbody-hover-1: rgb(64, 65, 85);
+    --bg-tbody-hover-2: rgb(184, 176, 56);
+}
+
+body{
+    color: white;
+}
+
+span{
+    background-color: var(--bg-tbody-5-blue);
+    font-size: 30px;
+    width: 90vw;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-shadow: 2px 0px 0px blue,
+                 0px 2px 0px red,
+                 0px 0px 2px green;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+span:hover{
+    background-color: rgb(14, 70, 103);
+    transition: .2s ease-in-out;
+}
+
+#container {
+    width: 100%;
+    height: auto;
+    margin: 10px 5% 10px 5%;
+}
+table{
+    background-color: var(--bg-table);
+    width: 90%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+td::selection{
+    background-color: var(--bg-selection);
+    color: var(--color-selecttion);
+}
+tbody:nth-child(1){
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+}
+tbody{
+    background-color: var(--bg-tbody-5-blue);
+}
+tbody:hover{
+    background-color: rgb(184, 176, 56);
+    transition: .2s ease-in-out;
+}
+td:not(:last-child){
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    word-wrap: normal;
+    white-space: pre-wrap;
+    scroll-behavior: smooth;
+    transition: .2s ease-in-out;
+    font-size: 20px;
+}
+td:last-child{
+    transition: .2s ease-in-out;
+    font-size: 20px;
+    padding: 5px;
+    word-wrap: normal;
+    white-space: pre-wrap;
+    scroll-behavior: smooth;
+    border-radius: 5px;
+}
